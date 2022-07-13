@@ -11,13 +11,20 @@ public class empWageComputation
 		int emphrs=0,empwage=0;
 		int empCheck=(int) Math.floor(Math.random()*10%3);
 
-		if(empCheck==PART_TIME)
+		switch(empCheck)
+		{
+		case PART_TIME:
 			emphrs=4;
-		else if(empCheck==FULL_TIME)
+			break;
+
+		case FULL_TIME:
 			emphrs=8;
-		else
+			break;
+
+		default:
 			emphrs=0;
 
+		}
 		empwage=emphrs*WAGE_PER_HOUR;
 
 		System.out.println("Employee Wage :"+empwage);
